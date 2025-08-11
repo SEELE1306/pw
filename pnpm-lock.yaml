@@ -18,6 +18,12 @@ importers:
       '@unocss/preset-web-fonts':
         specifier: ^66.4.2
         version: 66.4.2
+      '@unocss/preset-wind4':
+        specifier: ^66.4.2
+        version: 66.4.2
+      '@unocss/reset':
+        specifier: ^66.4.2
+        version: 66.4.2
       unocss:
         specifier: ^66.4.2
         version: 66.4.2(postcss@8.5.6)(vite@6.3.5(@types/node@24.2.1)(jiti@2.5.1))

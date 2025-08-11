@@ -1,11 +1,13 @@
-import { presetMini } from 'unocss'
-import { presetAttributify } from 'unocss'
-import { presetWebFonts } from 'unocss'
+
 import { defineConfig } from 'unocss'
+import { presetAttributify } from 'unocss'
+import presetWind4 from '@unocss/preset-wind4'
+import presetWebFonts from '@unocss/preset-web-fonts'
+
 
 export default defineConfig({
     presets: [
-        presetMini(),
+        presetWind4(),
         presetAttributify(),
         presetWebFonts({
             provider: 'google',
@@ -42,6 +44,7 @@ export default defineConfig({
         [/^m-(\d+)$/, ([, d]) => ({ margin: `${d / 4}rem` })],
         [/^p-(\d+)$/, match => ({ padding: `${match[1] / 4}rem` })],
 
+        
         ['bold', { 'font-weight': 700 }],
         ['regular', { 'font-weight': 500 }],
         ['light', { 'font-weight': 300 }],
@@ -53,5 +56,12 @@ export default defineConfig({
         ['sans', { 'font-family': 'Inter, sans-serif' }],
         ['serif', { 'font-family': 'Shippori Mincho, serif' }],
         ['mono', { 'font-family': 'Roboto Mono, monospace' }],
+    ],
+
+    shortcuts: [
+        {
+            'btn': 'p-2 m-4 bg-brand-primary border-4 border-accent rounded-2xl',
+            'text-btn': 'text-3xl text-center font-serif font-bold text-vibrant',
+        },
     ]
 })
