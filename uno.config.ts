@@ -1,6 +1,7 @@
 
 import { defineConfig } from 'unocss'
 import { presetAttributify } from 'unocss'
+import { transformerDirectives } from 'unocss'
 import presetWind4 from '@unocss/preset-wind4'
 import presetWebFonts from '@unocss/preset-web-fonts'
 
@@ -38,6 +39,11 @@ export default defineConfig({
             lg: '1.125rem',
             xl: '1.25rem',
         },
+        breakpoints: {
+            xs: '320px',
+            sm: '640px',
+            md: '960px',
+        },
     },
 
     rules: [
@@ -69,18 +75,17 @@ export default defineConfig({
         {
             getCSS: ({ theme }) => `
             h1 { 
-                font-size: 4rem; 
-                font-family: 'Shippori Mincho', serif; 
-                font-weight: 700; 
-                color: ${theme.colors?.accent}; 
+                @apply text-4xl font-serif font-bold text-accent; 
             }
             h2 { 
-                font-size: 3rem; 
-                font-family: 'Shippori Mincho', serif;  
-                font-weight: 700; 
-                color: ${theme.colors?.['brand']?.primary}; 
+                @apply text-3xl font-serif font-bold text-accent;
             }
     `,
         },
-    ]
+    ],
+
+    transformers: [
+        transformerDirectives(),
+    ],
+    
 })
