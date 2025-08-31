@@ -24,6 +24,7 @@ export default defineConfig({
         colors: {
             accent: '#a57562',
             normal: '#a3a5aa',
+            muted: '#6e7074',
             vibrant: '#b5bac1',
             brand: {
                 primary: '#262626',
@@ -78,7 +79,7 @@ export default defineConfig({
                 @apply text-4xl font-serif font-bold text-accent; 
             }
             h2 { 
-                @apply text-3xl font-serif font-bold text-accent;
+                @apply text-2xl font-sans font-bold text-accent;
             }
     `,
         },

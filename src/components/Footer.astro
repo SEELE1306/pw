@@ -3,9 +3,25 @@ import Social from "../components/Social.astro"
 
 ---
 <footer>
-    <div class="text-center align-bottom">2025 © SEELE1306. All rights reserved.</div>
-    <div class="flex justify-center gap-6 mt-4">
-        <Social platform="GitHub" username="SEELE1306" />
-        <Social platform="Unsplash" username="seele1306" />
+        
+    <div class="flex mt-2 ml-4 mb-8">
+        <div>Find me on
+            <div class="flex gap-4 mt-4">
+                <Social platform="GitHub" username="SEELE1306" />
+                <Social platform="Unsplash" username="@seele1306" />
+            </div>
+        </div>
+    </div>
+
+    <div class="text-left text-muted ml-4">
+        <div>2025 © Aoi / SEELE1306.</div>
+        <div> Made with 
+            <a class="font-bold hover:underline hover:text-normal" href="https://astro.build/">Astro</a> 
+            and 
+            <a class="font-bold hover:underline hover:text-normal" href="https://unocss.dev/">UnoCSS</a>.
+        </div>
+        <div>Part of this site is inspired by
+            <a href="https://antfu.me/" class="font-bold hover:underline hover:text-normal">Anthony Fu</a>
+        </div>
     </div>
 </footer>
