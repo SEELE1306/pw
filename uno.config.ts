@@ -60,8 +60,27 @@ export default defineConfig({
 
     shortcuts: [
         {
-            'btn': 'p-2 m-4 bg-brand-primary border-4 border-accent rounded-2xl',
+            'btn': 'p-2 m-4 bg-brand-tertiary border-4 border-accent rounded-2xl',
             'text-btn': 'text-3xl text-center font-serif font-bold text-vibrant',
+        },
+    ],
+
+    preflights: [
+        {
+            getCSS: ({ theme }) => `
+            h1 { 
+                font-size: 4rem; 
+                font-family: 'Shippori Mincho', serif; 
+                font-weight: 700; 
+                color: ${theme.colors?.accent}; 
+            }
+            h2 { 
+                font-size: 3rem; 
+                font-family: 'Shippori Mincho', serif;  
+                font-weight: 700; 
+                color: ${theme.colors?.['brand']?.primary}; 
+            }
+    `,
         },
     ]
 })
