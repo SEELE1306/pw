@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 import '../styles/global.css';
 
 const pageTitle = "About Me";
@@ -9,7 +10,7 @@ const identity = {
     hobbies: ["cooking", "exploring"]
 }
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["useless1", "useless2", "useless3", "useless4"];
 ---
 
 <Layout>
@@ -23,6 +24,6 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
     <p>My skills are:</p>
     <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
+        {skills.map((skill) => <li class="text-3xl font-bold">{skill}</li>)}
     </ul>
 </Layout>
