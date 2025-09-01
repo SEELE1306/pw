@@ -1,15 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "Home";
 ---
 
-<Layout>
+<BaseLayout>
 	<title>{pageTitle}</title>
 	<div class="btn text-btn">Under construction...</div>
-	<script>
-    	document.querySelector('.hamburger')?.addEventListener('click', () => {
-      	document.querySelector('.nav-links')?.classList.toggle('expanded');
-    });
-  </script>
-</Layout>
+</BaseLayout>

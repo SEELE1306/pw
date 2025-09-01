@@ -16,11 +16,11 @@ body {
 }
 
 .hamburger {
-    @apply 'pr-4 cursor-pointer';
+    @apply 'cursor-pointer';
 }
 
 .hamburger .line {
-    @apply 'block w-40px h-4px mb-1 bg-brand-tertiary';
+    @apply 'block w-40px h-4px mb-10px bg-brand-tertiary';
 }
 
 .nav-links {

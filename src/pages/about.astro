@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 import '../styles/global.css';
 
@@ -13,7 +13,7 @@ const identity = {
 const skills = ["useless1", "useless2", "useless3", "useless4"];
 ---
 
-<Layout>
+<BaseLayout>
     <title>{pageTitle}</title>
 	<div class="btn text-btn">About Page</div>
     <h1>Hello!</h1>
@@ -26,4 +26,4 @@ const skills = ["useless1", "useless2", "useless3", "useless4"];
     <ul>
         {skills.map((skill) => <li class="text-3xl font-bold">{skill}</li>)}
     </ul>
-</Layout>
+</BaseLayout>
