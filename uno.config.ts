@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'unocss'
 import { presetAttributify } from 'unocss'
 import { transformerDirectives } from 'unocss'
@@ -25,7 +24,7 @@ export default defineConfig({
 
     theme: {
         colors: {
-            accent: '#a57562',
+            accent: '#9f82ec',
             normal: '#a3a5aa',
             muted: '#6e7074',
             vibrant: '#b5bac1',
@@ -64,6 +63,7 @@ export default defineConfig({
         transformerDirectives(),
     ],
 
+    /* Mainly to configure markdown elements */
     preflights: [
        {
             getCSS: ({ theme }) => `

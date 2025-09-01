@@ -6,12 +6,12 @@ const pageTitle = frontmatter.title;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="m-4">
+    <div class="m-8">
         <h1>{frontmatter.title}</h1>
         <div>Written by {frontmatter.author}</div>
         <div>Posted on {frontmatter.pubDate.toString().slice(0,10)}</div>
     </div>
-    <div class="my-8 mx-4 max-w-3xl">
+    <div class="m-8 max-w-3xl">
         <slot />
     </div>
 </BaseLayout>
