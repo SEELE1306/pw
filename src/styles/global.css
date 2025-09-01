@@ -7,12 +7,24 @@ body {
     @apply 'box-border';
 }
 
-.h1 { 
+h1 { 
     @apply 'text-4xl font-serif font-bold text-accent'; 
 }
 
-.h2 { 
-    @apply 'text-2xl font-sans font-bold text-accent';
+h2 { 
+    @apply 'text-2xl font-sans font-bold text-accent mb-2';
+}
+
+h3 { 
+    @apply 'text-xl font-sans font-bold text-accent';
+}
+
+h4 { 
+    @apply 'text-lg font-sans font-bold text-accent';
+}
+
+p {
+    @apply 'mb-4';
 }
 
 .hamburger {
@@ -37,12 +49,6 @@ body {
 
 /* Larger screens */
 @media screen and (min-width: 640px) {
-    .h1 { 
-        @apply 'text-4xl'; 
-    }
-    .h2 { 
-        @apply 'text-2xl'; 
-    }
     .hamburger {
         @apply 'hidden';
     }
