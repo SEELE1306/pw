@@ -22,6 +22,6 @@ These can include software that I normally use, GitHub repositories (currently D
 
 Something I want to focus on the most. Cooking has been and still remains an integral part of my daily life. Here I will likely post my cooking framework, including guides on ingredient choice, cooking methods etc.
 
-#### Photography
+### Photography
 
 This is where I will likely share my darktable LUTs for those interested in color grading, along with guides on mobile photography. Unsplash API could also be used to display random images from my Unsplash collections. 

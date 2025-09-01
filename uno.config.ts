@@ -7,7 +7,11 @@ import presetWebFonts from '@unocss/preset-web-fonts'
 
 export default defineConfig({
     presets: [
-        presetWind4(),
+        presetWind4({
+            preflights: {
+                reset: true,
+            }
+        }),
         presetAttributify(),
         presetWebFonts({
             provider: 'google',
@@ -59,4 +63,20 @@ export default defineConfig({
     transformers: [
         transformerDirectives(),
     ],
+
+    preflights: [
+       {
+            getCSS: ({ theme }) => `
+                h1 {
+                    @apply text-4xl font-serif font-bold text-accent mb-4;
+                }
+                h2 {
+                    @apply text-xl font-sans font-bold text-accent mb-2;
+                }
+                h3 {
+                    @apply text-lg font-sans font-bold text-accent;
+                }
+            `,
+       }, 
+    ]
 })
