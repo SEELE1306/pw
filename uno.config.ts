@@ -33,17 +33,6 @@ export default defineConfig({
                 slate: '#191919',
             },
         },
-        fontSize: {
-            sm: '0.875rem',
-            base: '1rem',
-            lg: '1.125rem',
-            xl: '1.25rem',
-        },
-        breakpoints: {
-            xs: '320px',
-            sm: '640px',
-            md: '960px',
-        },
     },
 
     rules: [
@@ -54,10 +43,6 @@ export default defineConfig({
         ['bold', { 'font-weight': 700 }],
         ['regular', { 'font-weight': 500 }],
         ['light', { 'font-weight': 300 }],
-
-        ['center', { 'text-align': 'center' }],
-        ['right', { 'text-align': 'right' }],
-        ['left', { 'text-align': 'left' }],
 
         ['sans', { 'font-family': 'Inter, sans-serif' }],
         ['serif', { 'font-family': 'Shippori Mincho, serif' }],

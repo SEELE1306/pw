@@ -6,11 +6,11 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout>
     <div class="m-4">
-        <h1 class="mb-4">{frontmatter.title}</h1>
+        <h1 class="text-4xl font-serif font-bold text-accent mb-4">{frontmatter.title}</h1>
         <div>Written by {frontmatter.author}</div>
         <div>Posted on {frontmatter.pubDate.toString().slice(0,10)}</div>
     </div>
-    <div class="my-8 mx-4">
+    <div class="my-8 mx-4 max-w-3xl">
         <slot />
     </div>
 </BaseLayout>
