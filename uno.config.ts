@@ -5,7 +5,6 @@ import { transformerDirectives } from 'unocss'
 import presetWind4 from '@unocss/preset-wind4'
 import presetWebFonts from '@unocss/preset-web-fonts'
 
-
 export default defineConfig({
     presets: [
         presetWind4(),
@@ -75,5 +74,4 @@ export default defineConfig({
     transformers: [
         transformerDirectives(),
     ],
-
 })

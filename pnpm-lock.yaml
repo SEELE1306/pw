@@ -12,9 +12,6 @@ importers:
         specifier: ^5.13.4
         version: 5.13.4(@types/node@24.2.1)(jiti@2.5.1)(rollup@4.46.2)(typescript@5.9.2)
     devDependencies:
-      '@unocss/preset-mini':
-        specifier: ^66.4.2
-        version: 66.4.2
       '@unocss/preset-web-fonts':
         specifier: ^66.4.2
         version: 66.4.2

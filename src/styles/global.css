@@ -53,9 +53,9 @@ p {
         @apply 'hidden';
     }
     .nav-links {
-        @apply 'flex gap-4 position-static w-auto m-4';
+        @apply flex gap-4 position-static w-auto m-4;
     }
     .nav-links a {
-        @apply 'inline-block';
+        @apply inline-block;
     }
 }
