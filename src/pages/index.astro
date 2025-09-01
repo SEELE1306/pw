@@ -7,4 +7,9 @@ const pageTitle = "Home";
 <Layout>
 	<title>{pageTitle}</title>
 	<div class="btn text-btn">Under construction...</div>
+	<script>
+    	document.querySelector('.hamburger')?.addEventListener('click', () => {
+      	document.querySelector('.nav-links')?.classList.toggle('expanded');
+    });
+  </script>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -11,10 +12,13 @@ import Footer from "../components/Footer.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 	</head>
-	<body class="bg-brand-primary text-vibrant">
+	<body>
 		<Header />
-		<slot />
+			<slot />
 		<Footer />
+		<script>
+			import "../scripts/menu.js";
+  		</script>
 	</body>
 </html>
 

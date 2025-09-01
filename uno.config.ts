@@ -72,19 +72,6 @@ export default defineConfig({
         },
     ],
 
-    preflights: [
-        {
-            getCSS: ({ theme }) => `
-            h1 { 
-                @apply text-4xl font-serif font-bold text-accent; 
-            }
-            h2 { 
-                @apply text-2xl font-sans font-bold text-accent;
-            }
-    `,
-        },
-    ],
-
     transformers: [
         transformerDirectives(),
     ],
