@@ -1,19 +1,4 @@
 /* Larger screens */
-* {
-    @apply 'box-border';
-}
-p {
-    @apply mb-4;
-}
-
-.nav-links {
-    @apply flex gap-4 position-static w-auto m-4;
-}
-
-.nav-links a {
-    @apply 'inline-block text-lg font-sans text-normal hover:underline';
-}
-
 .expanded {
     display: unset;
 }

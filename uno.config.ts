@@ -76,6 +76,12 @@ export default defineConfig({
                 h3 {
                     @apply text-lg font-sans font-bold text-accent;
                 }
+                * {
+                    @apply box-border;
+                }
+                p { 
+                    @apply mb-4; 
+                }
             `,
        }, 
     ]

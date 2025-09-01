@@ -2,9 +2,10 @@
 import '../../styles/global.css';
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const { frontmatter } = Astro.props;
+const pageTitle = frontmatter.title;
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
     <div class="m-4">
         <h1>{frontmatter.title}</h1>
         <div>Written by {frontmatter.author}</div>
