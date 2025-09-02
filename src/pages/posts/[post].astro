@@ -10,6 +10,8 @@ const pageTitle = frontmatter.title;
         <h1>{frontmatter.title}</h1>
         <div>Written by {frontmatter.author}</div>
         <div>Posted on {frontmatter.pubDate.toString().slice(0,10)}</div>
+        <div><em>{frontmatter.description}</em></div>
+        <img class="my-4" src={frontmatter.image.url} width="640" alt={frontmatter.image.alt} />
     </div>
     <div class="m-8 max-w-3xl">
         <slot />

@@ -5,6 +5,9 @@ author: 'Aoi'
 pubDate: 2025-08-31
 slug: initial-targets-for-the-website
 description: 'Description of the post'
+image: 
+    url: '../../public/sample01.jpg'
+    alt: 'Sample image for testing'
 tags: ["test1", "test2", "test3"]
 ---
 
