@@ -68,22 +68,48 @@ export default defineConfig({
        {
             getCSS: ({ theme }) => `
                 h1 {
-                    @apply text-4xl font-serif font-bold text-accent mb-4;
+                    @apply text-4xl font-serif font-bold text-accent my-4;
                 }
                 h2 {
-                    @apply text-xl font-sans font-bold text-accent mb-2;
+                    @apply text-xl font-sans font-bold text-accent my-3;
                 }
                 h3 {
-                    @apply text-lg font-sans font-bold text-accent;
+                    @apply text-lg font-sans font-bold text-accent my-2;
                 }
                 h4 {
-                    @apply text-base font-sans font-bold text-accent;
+                    @apply text-base font-sans font-bold text-accent my-1;
                 }
                 * {
                     @apply box-border;
                 }
                 p { 
                     @apply mb-4; 
+                }
+                .nav-links {
+                    @apply w-100% bg-brand-secondary m-8 hidden;
+                }
+                .nav-links a {
+                    @apply block text-lg ml-8 hover:underline;
+                }
+                .hamburger {
+                    @apply block relative top-8 left-8 pb-4 mb-8 cursor-pointer;
+                }
+                .hamburger .line {
+                    @apply block w-8 h-1 mb-2 bg-accent;                  
+                }
+                .expanded {
+                    display: unset;                
+                }
+                @screen sm {
+                    .hamburger {
+                        @apply hidden;                    
+                    }
+                    .nav-links {
+                        @apply flex static w-auto gap-4 justify-right;
+                    }
+                    .nav-links a {
+                        @apply inline-block ml-0;
+                    }                
                 }
             `,
        }, 
