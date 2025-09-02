@@ -4,6 +4,7 @@ import UnoCSS from 'unocss/astro'
 
 // https://astro.build/config
 export default defineConfig({
+    site: "https://seele1306.com",
     integrations: [
         UnoCSS({
             injectReset: true,
