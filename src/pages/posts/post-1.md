@@ -8,7 +8,7 @@ description: 'Description of the post'
 image: 
     url: '../../src/assets/images/sample01.jpg'
     alt: 'Sample image for testing'
-tags: ["test1", "test2", "test3"]
+tags: ["test1", "test2"]
 ---
 
 ## Targets

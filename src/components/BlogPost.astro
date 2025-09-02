@@ -1,0 +1,7 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const { title, url } = Astro.props;
+---
+<li>
+    <a class="inline-block text-lg font-sans text-normal hover:underline" href={url}>{title}</a>
+</li>
