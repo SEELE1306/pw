@@ -9,8 +9,8 @@ const pageTitle = frontmatter.title;
         <div class="blog-post">
             <h1>{frontmatter.title}</h1>
             <div>Written by {frontmatter.author}</div>
-            <div>Posted on {frontmatter.pubDate.toLocaleDateString()}</div>
-            <div><em>{frontmatter.description}</em></div>
+            <div>Posted on {frontmatter.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+            <div>{frontmatter.description}</div>
             <img class="my-4" src={frontmatter.image.url} width="640" alt={frontmatter.image.alt} />
             <div class="flex gap-4">
                 <div class="text-accent font-bold">Tags:</div>

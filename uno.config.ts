@@ -105,6 +105,9 @@ export default defineConfig({
                 .blog-post {
                     @apply m-8 max-w-75vw;
                 }
+                .expanded {
+                    display: unset;
+                }
 
                 @screen sm {
                     .hamburger {
