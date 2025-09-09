@@ -36,6 +36,11 @@ export default defineConfig({
                 slate: '#191919',
             },
         },
+
+        breakpoints: {
+            sm: '640px',
+            lg: '960px',
+        }
     },
 
     rules: [
@@ -97,18 +102,22 @@ export default defineConfig({
                 .hamburger .line {
                     @apply block w-8 h-1 mb-2 bg-accent;                  
                 }
-                .expanded {
-                    display: unset;                
+                .blog-post {
+                    @apply m-8 max-w-75vw;
                 }
+
                 @screen sm {
                     .hamburger {
                         @apply hidden;                    
                     }
                     .nav-links {
-                        @apply flex static w-auto gap-4 justify-right;
+                        @apply flex static w-auto gap-4 justify-right bg-transparent;
                     }
                     .nav-links a {
                         @apply inline-block ml-0;
+                    }
+                    .blog-post {
+                        @apply max-w-50vw;                    
                     }                
                 }
             `,

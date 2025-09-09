@@ -7,7 +7,7 @@ slug: initial-targets-for-the-website
 description: 'Description of the post'
 image: 
     url: '../../src/assets/images/sample01.jpg'
-    alt: 'Sample image for testing'
+    alt: 'testing'
 tags: ["test1", "test2"]
 ---
 

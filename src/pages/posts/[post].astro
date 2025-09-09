@@ -6,22 +6,22 @@ const pageTitle = frontmatter.title;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="m-8">
-        <h1>{frontmatter.title}</h1>
-        <div>Written by {frontmatter.author}</div>
-        <div>Posted on {frontmatter.pubDate.toString().slice(0,10)}</div>
-        <div><em>{frontmatter.description}</em></div>
-        <img class="my-4" src={frontmatter.image.url} width="640" alt={frontmatter.image.alt} />
-        <div class="flex gap-4">
-            <div class="text-accent font-bold">Tags:</div>
-            {frontmatter.tags.map((tag: string) => (
-                <p>
-                    <a class="inline-block font-sans text-normal hover:underline" href={`/tags/${tag}`}>{tag}</a>
-                </p>
-            ))}
+    <div class="flex justify-center">
+        <div class="blog-post">
+            <h1>{frontmatter.title}</h1>
+            <div>Written by {frontmatter.author}</div>
+            <div>Posted on {frontmatter.pubDate.toString().slice(0,10)}</div>
+            <div><em>{frontmatter.description}</em></div>
+            <img class="my-4" src={frontmatter.image.url} width="640" alt={frontmatter.image.alt} />
+            <div class="flex gap-4">
+                <div class="text-accent font-bold">Tags:</div>
+                {frontmatter.tags.map((tag: string) => (
+                    <p>
+                        <a class="inline-block font-sans text-normal hover:underline" href={`/tags/${tag}`}>{tag}</a>
+                    </p>
+                ))}
+            </div>
+            <slot />
         </div>
-    </div>
-    <div class="m-8 max-w-3xl">
-        <slot />
     </div>
 </BaseLayout>
