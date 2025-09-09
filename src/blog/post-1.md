@@ -1,9 +1,7 @@
 ---
-layout: ./[post].astro
 title: 'Initial targets for the website'
 author: 'Aoi'
 pubDate: 2025-08-31
-slug: initial-targets-for-the-website
 description: 'Description of the post'
 image: 
     url: '../../src/assets/images/sample01.jpg'

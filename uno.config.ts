@@ -110,7 +110,7 @@ export default defineConfig({
                     .hamburger {
                         @apply hidden;                    
                     }
-                    .nav-links {
+                    .nav-links {    
                         @apply flex static w-auto gap-4 justify-right bg-transparent;
                     }
                     .nav-links a {

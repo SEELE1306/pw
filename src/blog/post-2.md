@@ -1,13 +1,11 @@
 ---
-layout: ./[post].astro
 title: 'New System'
 author: 'Aoi'
 pubDate: 2025-09-02
-slug: new-system
 description: 'Description of the post'
 image: 
     url: '../../src/assets/images/sample01.jpg'
-    alt: 'Sample image for testing'
+    alt: 'testing'
 tags: ["test2", "test3"]
 ---
 ## Overview

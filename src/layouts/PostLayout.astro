@@ -1,16 +1,15 @@
 ---
-import '../../styles/global.css';
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 const pageTitle = frontmatter.title;
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={frontmatter.title}>  
     <div class="flex justify-center">
         <div class="blog-post">
             <h1>{frontmatter.title}</h1>
             <div>Written by {frontmatter.author}</div>
-            <div>Posted on {frontmatter.pubDate.toString().slice(0,10)}</div>
+            <div>Posted on {frontmatter.pubDate.toLocaleDateString()}</div>
             <div><em>{frontmatter.description}</em></div>
             <img class="my-4" src={frontmatter.image.url} width="640" alt={frontmatter.image.alt} />
             <div class="flex gap-4">
