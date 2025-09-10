@@ -33,7 +33,7 @@ Debian 13 (Trixie) with
 
 It's probably best to have an Ethernet connection during installation, Debian can be quite annoying when it comes to setting up wifi
 
-Since Debian 13 (Trixie) is not officially released yet (it will be in 2 weeks, we will use the Debian 12 (Bookworm) netinstaller for now, and upgrade to Trixie later once we have finished the installation
+Since Debian 13 (Trixie) is not officially released yet (it will be in 2 weeks), we will use the Debian 12 (Bookworm) netinstaller for now, and upgrade to Trixie later once we have finished the installation
 
 Use Ventoy to boot the installation ISO
 

@@ -2,7 +2,6 @@
 import { defineConfig } from 'astro/config';
 import UnoCSS from 'unocss/astro'
 
-// https://astro.build/config
 export default defineConfig({
     site: "https://seele1306.com",
     integrations: [
@@ -10,4 +9,10 @@ export default defineConfig({
             injectReset: true,
         }),
     ],
+    markdown: {
+        shikiConfig: {
+            theme: 'vitesse-dark',
+            defaultColor: false,
+        }
+    }
 });

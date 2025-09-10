@@ -1,13 +1,12 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
-const pageTitle = frontmatter.title;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>  
     <div class="flex justify-center">
-        <div class="blog-post">
-            <h1>{frontmatter.title}</h1>
+        <div class="max-w-75vw sm:max-w-50vw">
+            <h1 class="post-title">{frontmatter.title}</h1>
             <div>Written by {frontmatter.author}</div>
             <div>Posted on {frontmatter.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
             <div>{frontmatter.description}</div>
@@ -16,11 +15,13 @@ const pageTitle = frontmatter.title;
                 <div class="text-accent font-bold">Tags:</div>
                 {frontmatter.tags.map((tag: string) => (
                     <p>
-                        <a class="inline-block font-sans text-normal hover:underline" href={`/tags/${tag}`}>{tag}</a>
+                        <a class="link" href={`/tags/${tag}`}>{tag}</a>
                     </p>
                 ))}
             </div>
-            <slot />
+            <article class="post-default">
+                <slot />
+            </article>
         </div>
     </div>
 </BaseLayout>

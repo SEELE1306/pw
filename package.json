@@ -13,6 +13,7 @@
     "astro": "^5.13.6"
   },
   "devDependencies": {
+    "@unocss/preset-typography": "^66.5.1",
     "@unocss/preset-web-fonts": "^66.4.2",
     "@unocss/preset-wind4": "^66.4.2",
     "@unocss/reset": "^66.4.2",
