@@ -1,12 +1,6 @@
 * {
     @apply box-border;
 }
-.nav-links {
-    @apply w-100% bg-brand-secondary m-8 hidden;
-}
-.nav-links a {
-    @apply block text-lg ml-8 hover:underline;
-}
 .hamburger {
     @apply block relative top-8 left-8 pb-4 mb-8 cursor-pointer;
 }
@@ -21,11 +15,5 @@
 @screen sm {
     .hamburger {
         @apply hidden;
-    }
-    .nav-links {
-        @apply flex static w-auto gap-4 justify-right bg-transparent;
-    }
-    .nav-links a {
-        @apply inline-block ml-0;
     }
 }

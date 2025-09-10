@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
-    "astro": "^5.13.6"
+    "astro": "^5.13.6",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@unocss/preset-typography": "^66.5.1",

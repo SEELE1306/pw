@@ -71,7 +71,9 @@ export default defineConfig({
             'text-btn': 'text-3xl text-center font-serif font-bold text-vibrant',
             'post-title': 'text-4xl font-serif font-bold text-accent my-4',
             'post-default': 'text-normal markdown markdown-headings:font-bold markdown-headings:text-accent markdown-h2:text-2xl markdown-h3:text-lg markdown-h4:text-base markdown-p:mb-4',
-            'link': 'inline-block text-muted hover:underline hover:text-vibrant',
+            'link': 'inline-block text-normal hover:underline',
+            'nav-link': 'block ml-8 sm:inline-block sm:m-0 text-normal hover:underline',
+            'nav': 'w-100% m-8 hidden sm:flex sm:static sm:w-auto sm:gap-4 sm:justify-right',
         },
     ],
 

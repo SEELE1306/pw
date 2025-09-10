@@ -3,9 +3,9 @@ title: 'Initial targets for the website'
 author: 'Aoi'
 pubDate: 2025-08-31
 description: 'Description of the post'
-image: 
-    url: '../../src/assets/images/sample01.jpg'
-    alt: 'testing'
+slug: initial-targets-for-the-website
+cover: '../../src/assets/images/sample01.jpg'
+coverAlt: 'A photograph of a sunset behind a mountain range.'
 tags: ["test1", "test2"]
 ---
 

@@ -3,9 +3,9 @@ title: 'New System'
 author: 'Aoi'
 pubDate: 2025-09-02
 description: 'Description of the post'
-image: 
-    url: '../../src/assets/images/sample01.jpg'
-    alt: 'testing'
+slug: new-system
+cover: '../../src/assets/images/sample01.jpg'
+coverAlt: 'A photograph of a sunset behind a mountain range.'
 tags: ["test2", "test3"]
 ---
 ## Overview
