@@ -11,8 +11,8 @@ const pageTitle = "Blog Page";
 	<div class="btn text-btn">Blog Page</div>
   <p class="text-left ml-8">This is the blog page of the site.</p>
   <p class="text-left ml-8">It will be updated throughout the tutorial.</p>
-  <ul class="m-8 flex gap-8">
-    {allBlogPosts.map((post: any) => 
+  <ul class="m-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
+    {allBlogPosts.map((post: any) =>
       <div>
         <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
         <Image class="my-4" src={post.data.cover} alt={post.data.coverAlt} layout='constrained' width={320} />
