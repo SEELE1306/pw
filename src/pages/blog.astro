@@ -13,9 +13,24 @@ const pageTitle = "Blog Page";
   <p class="text-left ml-8">It will be updated throughout the tutorial.</p>
   <ul class="m-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
     {allBlogPosts.map((post: any) =>
-      <div>
-        <BlogPost url={`/posts/${post.id}`} title={post.data.title} />
-        <Image class="my-4" src={post.data.cover} alt={post.data.coverAlt} layout='constrained' width={320} />
+      <div class="flex flex-col h-full">
+        <div class="min-h-20">
+          <BlogPost 
+            url={`/posts/${post.id}`} 
+            title={post.data.title} 
+          />
+        </div>
+        <div class="mt-auto">
+          <Image 
+            class="w-full object-cover" 
+            src={post.data.cover} 
+            alt={post.data.coverAlt} 
+            layout='constrained' 
+            loading="lazy" 
+            inferSize 
+          />
+        </div>
+        
       </div>
     )}
   </ul>

@@ -1,32 +1,40 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
-const allBlogPosts = await getCollection("blog");
+
+// Get post data as a prop instead of fetching all posts
+const { frontmatter } = Astro.props;
 ---
-{
-    allBlogPosts.map((post) => (
-        <BaseLayout pageTitle={post.data.title}>  
-            <div class="flex justify-center">
-                <div class="max-w-75vw sm:max-w-50vw">
-                    <h1 class="post-title">{post.data.title}</h1>
-                    <div>Written by <b>{post.data.author}</b></div>
-                    <div>Posted on {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
-                    <div class="mt-8"><em>{post.data.description}</em></div>
-                    <Image class="my-4" src={post.data.cover} alt={post.data.coverAlt} layout='constrained' width={640} />
-                    <div class="flex gap-4">
-                        <div class="text-accent font-bold">Tags:</div>
-                        {post.data.tags.map((tag: string) => (
-                            <p>
-                                <a class="link" href={`/tags/${tag}`}>{tag}</a>
-                            </p>
-                    ))}
-                    </div>
-                    <article class="post-default">
-                        <slot />
-                    </article>
-                </div>
+<BaseLayout pageTitle={frontmatter.title}>  
+    <div class="flex justify-center">
+        <div class="max-w-75vw sm:max-w-50vw">
+            <h1 class="post-title">{frontmatter.title}</h1>
+            <div>Written by <b>{frontmatter.author}</b></div>
+            <div>
+                Posted on {frontmatter.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
-        </BaseLayout>
-    ))
-}
+            <div class="mt-8"><em>{frontmatter.description}</em></div>
+            <Image 
+                class="my-4 w-full object-cover" 
+                src={frontmatter.cover} 
+                alt={frontmatter.coverAlt} 
+                layout='constrained' 
+                loading="lazy" 
+                inferSize 
+            />
+            <div class="flex gap-4">
+                <div class="text-accent font-bold">
+                    Tags:
+                </div>
+                {frontmatter.tags.map((tag: string) => (
+                    <p>
+                        <a class="link" href={`/tags/${tag}`}>{tag}</a>
+                    </p>
+                ))}
+            </div>
+            <article class="post-default">
+                <slot />
+            </article>
+        </div>
+    </div>
+</BaseLayout>
