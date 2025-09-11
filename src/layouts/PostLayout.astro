@@ -19,7 +19,7 @@ const { frontmatter } = Astro.props;
                 src={frontmatter.cover} 
                 alt={frontmatter.coverAlt} 
                 layout='constrained' 
-                loading="lazy" 
+                loading="eager" 
                 inferSize 
             />
             <div class="flex gap-4">
