@@ -14,7 +14,7 @@ const pageTitle = "Blog Page";
   <ul class="m-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
     {allBlogPosts.map((post: any) =>
       <div class="flex flex-col h-full">
-        <div class="min-h-20">
+        <div class="min-h-12 sm:min-h-20">
           <BlogPost 
             url={`/posts/${post.id}`} 
             title={post.data.title} 
