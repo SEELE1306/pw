@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import BlogIndex from './index.astro';
+
+export async function getStaticPaths() {
+    const allBlogPosts = await getCollection("blog");
+    
+    const uniqueTags = [...new Set(allBlogPosts.map((post) => post.data.tags).flat())];
+    
+    return uniqueTags.map(tag => ({
+        params: { tag },
+        props: { params: { tag } },
+    }));
+}
+
+const { tag } = Astro.params;
+---
+<BlogIndex params={{ tag }} />

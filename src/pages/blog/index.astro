@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
+
+// Get the currently selected tag from URL params
+const { tag } = Astro.props.params || {};
+
+const allBlogPosts = await getCollection("blog");
+
+// Filter posts if a tag is selected
+const filteredPosts = tag 
+  ? allBlogPosts.filter(post => post.data.tags.includes(tag)) 
+  : allBlogPosts;
+
+const tags = [...new Set(allBlogPosts.map((post) => post.data.tags).flat())];
+
+const pageTitle = tag ? `Posts tagged with "${tag}"` : "Blog Page";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<div class="btn text-btn">{pageTitle}</div>
+
+  <div class="mx-8 my-4 flex flex-wrap items-center">
+    <div class="text-accent font-bold mr-4">Filter by tag:</div>
+    <div class="flex gap-4 flex-wrap">
+      <a 
+        class={`link ${!tag ? 'text-accent' : 'text-normal'}`} href="/blog"
+      >
+        All
+      </a>
+      {tags.map((tagName) => (
+        <a 
+          class={`link ${tagName === tag ? 'text-accent' : 'text-normal'}`} href={`/blog/${tagName}`}
+        >
+          {tagName}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <ul class="m-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
+    {filteredPosts.map((post) =>
+      <div class="flex flex-col h-full">
+        <div class="min-h-12 sm:min-h-20">
+          <BlogPost 
+            url={`/posts/${post.id}`} 
+            title={post.data.title} 
+          />
+        </div>
+        <div class="mt-auto">
+          <Image 
+            class="w-full object-cover" 
+            src={post.data.cover} 
+            alt={post.data.coverAlt} 
+            layout='constrained' 
+            loading="eager" 
+            inferSize 
+          />
+        </div>
+        
+      </div>
+    )}
+  </ul>
+</BaseLayout>
